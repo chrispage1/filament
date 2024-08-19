@@ -4,6 +4,7 @@ namespace Filament\Actions\Concerns;
 
 use AnourValar\EloquentSerialize\Facades\EloquentSerializeFacade;
 use Closure;
+use Filament\Actions\Events\ExportCompleted;
 use Filament\Actions\ExportAction;
 use Filament\Actions\Exports\Enums\ExportFormat;
 use Filament\Actions\Exports\ExportColumn;
@@ -226,6 +227,7 @@ trait CanExportRecords
                     'formats' => $formats,
                     'options' => $options,
                 ]),
+                event(new ExportCompleted($export)),
                 ...(($hasXlsx && $hasCsv) ? [$makeCreateXlsxFileJob()] : []),
             ])
                 ->when(

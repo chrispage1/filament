@@ -43,6 +43,7 @@ class Panel extends Component
     use Panel\Concerns\HasTenancy;
     use Panel\Concerns\HasTheme;
     use Panel\Concerns\HasTopbar;
+    use Panel\Concerns\HasRobotsMetaTag;
     use Panel\Concerns\HasTopNavigation;
     use Panel\Concerns\HasUnsavedChangesAlerts;
     use Panel\Concerns\HasUserMenu;

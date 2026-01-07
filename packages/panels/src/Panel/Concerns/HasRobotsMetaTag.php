@@ -8,7 +8,7 @@ use Livewire\Component;
 
 trait HasRobotsMetaTag
 {
-    protected Closure | bool $hideFromRobots = true;
+    protected Closure | bool $hideFromRobots = false;
 
     public function hideFromRobots(bool | Closure $condition = true): static
     {

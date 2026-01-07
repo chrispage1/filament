@@ -167,6 +167,11 @@ class FilamentManager
         return $this->getCurrentOrDefaultPanel()->getFavicon();
     }
 
+    public function shouldBeHiddenFromRobots(): bool
+    {
+        return $this->getCurrentOrDefaultPanel()->shouldBeHiddenFromRobots();
+    }
+
     public function getFontFamily(): string
     {
         return $this->getCurrentOrDefaultPanel()->getFontFamily();

@@ -5,13 +5,13 @@ use Filament\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('doesnt have a robots meta tag by default', function () {
+it('doesnt have a robots meta tag by default', function (): void {
     $this->get(Filament::getLoginUrl())
         ->assertSuccessful()
         ->assertDontSeeHtml('<meta name="robots" content="noindex, nofollow" />');
 });
 
-it('can enable the meta robots tag', function () {
+it('can enable the meta robots tag', function (): void {
     $panel = Filament::getCurrentOrDefaultPanel();
     $panel->hideFromRobots();
 

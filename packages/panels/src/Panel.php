@@ -36,6 +36,7 @@ class Panel extends Component
     use Panel\Concerns\HasNotifications;
     use Panel\Concerns\HasPlugins;
     use Panel\Concerns\HasRenderHooks;
+    use Panel\Concerns\HasRobotsMetaTag;
     use Panel\Concerns\HasRoutes;
     use Panel\Concerns\HasSidebar;
     use Panel\Concerns\HasSpaMode;
@@ -43,7 +44,6 @@ class Panel extends Component
     use Panel\Concerns\HasTenancy;
     use Panel\Concerns\HasTheme;
     use Panel\Concerns\HasTopbar;
-    use Panel\Concerns\HasRobotsMetaTag;
     use Panel\Concerns\HasTopNavigation;
     use Panel\Concerns\HasUnsavedChangesAlerts;
     use Panel\Concerns\HasUserMenu;
